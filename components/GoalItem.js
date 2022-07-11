@@ -1,10 +1,10 @@
-import { StyleSheet, Text, Pressable } from 'react-native'
+import { StyleSheet, Text, Pressable, TouchableOpacity } from 'react-native'
 
 function goalItem(props) {
-  return <Pressable android_ripple={{ color: '#a065ec' }} onPress={props.ondelete.bind(this, props.id)}>
+  return <TouchableOpacity activeOpacity={0.5} onPress={props.ondelete.bind(this, props.id)}>
 
     <Text style={styles.goalItem}>{props.text}</Text>
-  </Pressable>
+  </TouchableOpacity>
 
 };
 

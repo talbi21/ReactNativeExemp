@@ -20,6 +20,11 @@ export default function App() {
 
 
   function addGoal(entredGoalText) {
+
+    if (entredGoalText.length === 0) {
+      return;
+      
+    }
     setCourseGoals(currentCourseGoals => [
       ...currentCourseGoals,
       { text: entredGoalText, id: Math.random().toString() },
